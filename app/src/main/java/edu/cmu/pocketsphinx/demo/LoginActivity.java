@@ -61,6 +61,6 @@ public class LoginActivity extends AppCompatActivity {
     private void navigateToChat(){
         Intent i = new Intent(LoginActivity.this, ChatActivity.class);
         startActivity(i);
-        finish();
+
     }
 }
