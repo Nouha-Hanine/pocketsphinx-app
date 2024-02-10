@@ -35,6 +35,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="23dp"
         android:layout_marginBottom="136dp"
+        android:background="@color/lightpink"
         android:text="ASK-ME / SA9SINI" />
 
     <Button
@@ -44,6 +45,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginTop="16dp"
         android:layout_marginRight="34dp"
+        android:background="@color/lightpink"
         android:text="logout" />
 
 

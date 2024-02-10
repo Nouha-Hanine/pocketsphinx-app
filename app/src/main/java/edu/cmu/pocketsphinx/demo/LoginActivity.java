@@ -48,19 +48,20 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-              boolean isLog= DBhelper.checkAccount(username.getText().toString(), password.getText().toString());
-              if(isLog){
+            /*  boolean isLog= DBhelper.checkAccount(username.getText().toString(), password.getText().toString());
+              if(isLog){*/
                   navigateToChat();
-              }else{
+             /* }else{
                   Toast.makeText(LoginActivity.this, "Login failed", Toast.LENGTH_SHORT).show();
-              }
+              }*/
             }
         });
 
     }
     private void navigateToChat(){
-        Intent i = new Intent(LoginActivity.this, ChatActivity.class);
-        startActivity(i);
+        Intent intent = new Intent(LoginActivity.this, ChatActivity.class);
+        startActivity(intent);
+
 
     }
 }

@@ -11,22 +11,12 @@
         android:icon="@drawable/icon"
         android:label="SA9SINI/ASK_ME" >
 
-        <activity
-            android:name=".VoiceRecognitionManager"
-            android:exported="false"
-            tools:ignore="Instantiatable"
-            android:theme="@style/AppTheme"/>
 
-        <activity
-            android:name=".RecognitionListener"
-            android:exported="false"
-            tools:ignore="Instantiatable"
-            android:theme="@style/AppTheme"/>
 
         <activity
             android:name=".ChatActivity"
             android:exported="false"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
 
         <activity
             android:name=".SigninActivity"

@@ -33,34 +33,30 @@ public class VoiceRecognitionManager {
 
 
     private void initRecognizer() {
-        try {
 
-            File acousticModelDir = new File(context.getFilesDir(), "acoustic_model");
-            if (!acousticModelDir.exists()) {
+      /*  File acousticModelDir = new File(context.getFilesDir(), "acoustic_model");
+        if (!acousticModelDir.exists()) {
 
-                extractAssets(acousticModelDir);
-            }
+            extractAssets(acousticModelDir);
+        }
 
 
-            recognizer = SpeechRecognizerSetup.defaultSetup()
+           /* recognizer = SpeechRecognizerSetup.defaultSetup()
                     .setAcousticModel(acousticModelDir)
                     .setDictionary(new File(acousticModelDir, "dictionary"))
-                    .getRecognizer();
+                    .getRecognizer();*/
 
 
-            recognizer.addKeyphraseSearch("joke", "joke");
-            recognizer.addKeyphraseSearch("study", "study");
-            recognizer.addKeyphraseSearch("time", "time");
-            recognizer.addKeyphraseSearch("music", "music");
+        recognizer.addKeyphraseSearch("joke", "joke");
+        recognizer.addKeyphraseSearch("study", "study");
+        recognizer.addKeyphraseSearch("time", "time");
+        recognizer.addKeyphraseSearch("music", "music");
 
 
-            recognizer.addListener(new RecognitionListener());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        recognizer.addListener(new RecognitionListener());
     }
 
-    private void extractAssets(File targetDir) {
+   /* private void extractAssets(File targetDir) {
         try {
             String[] assets = context.getAssets().list("");
             if (assets != null) {
@@ -71,9 +67,9 @@ public class VoiceRecognitionManager {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
+    }*/
 
-    private void copyFileOrDir(String path, File targetDir) throws IOException {
+  /*  private void copyFileOrDir(String path, File targetDir) throws IOException {
         String[] assets = context.getAssets().list(path);
         for (String asset : assets) {
             String sourcePath = path + File.separator + asset;
@@ -88,9 +84,9 @@ public class VoiceRecognitionManager {
                 copyFileOrDir(sourcePath, newDir);
             }
         }
-    }
+    }*/
 
-    private void copyAssetFile(Context context, String assetFilePath, String destinationFilePath) throws IOException {
+   /* private void copyAssetFile(Context context, String assetFilePath, String destinationFilePath) throws IOException {
         InputStream inputStream = context.getAssets().open(assetFilePath);
         OutputStream outputStream = new FileOutputStream(destinationFilePath);
 
@@ -103,7 +99,7 @@ public class VoiceRecognitionManager {
         outputStream.flush();
         outputStream.close();
         inputStream.close();
-    }
+    }*/
 
     public void startListening() {
         if (recognizer != null) {
