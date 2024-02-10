@@ -1,0 +1,28 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 34
+    defaultConfig {
+        applicationId "edu.cmu.sphinx.pocketsphinx"
+        minSdkVersion 14
+        targetSdkVersion 34
+        versionCode 1
+        versionName "1.1"
+    }
+    namespace 'edu.cmu.pocketsphinx.demo'
+}
+
+dependencies {
+    implementation project(':aars')
+    implementation project(':models')
+    //noinspection GradleCompatible
+   implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.google.android.material:material:1.12.0-alpha03'
+
+    // implementation 'androidx.appcompat:appcompat:1.4.0'
+   // implementation 'androidx.appcompat:appcompat:1.0.0'
+
+}
